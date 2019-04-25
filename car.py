@@ -1,3 +1,6 @@
+ACCELL_BRAKE_INCR = 3
+
+
 class Car:
 
     def __init__(self, speed=0):
@@ -9,13 +12,13 @@ class Car:
         print("I'm going {} kph!".format(self.speed))
 
     def accelerate(self):
-        self.speed += 5
+        self.speed += ACCELL_BRAKE_INCR
 
     def brake(self):
         if self.speed < 5:
             self.speed = 0
         else:
-            self.speed -= 5
+            self.speed -= ACCELL_BRAKE_INCR
 
     def step(self):
         self.odometer += self.speed
